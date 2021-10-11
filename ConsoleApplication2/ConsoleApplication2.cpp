@@ -5,9 +5,13 @@
 #include <ctime>
 using namespace std;
 
+int toss() {
+	return rand() % 6 + 1;
+}
+
 int main()
 {
 	srand(time(0));
 	setlocale(LC_ALL, "RU");
-	cout << "Кубик 1: " << rand() % 6 + 1 << " Кубик 2: " << rand() % 6 + 1;
+	cout << "Кубик 1: " << toss() << " Кубик 2: " << toss();
 }
